@@ -1,0 +1,7 @@
+add_filter('woocommerce_get_catalog_ordering_args', 'my_woocommerce_order');
+function my_woocommerce_order($args){
+ $args['meta_key']='';
+ $args['orderby']='date';
+ $args['order']='desc';
+ return $args;
+}
